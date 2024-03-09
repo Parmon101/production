@@ -1,10 +1,10 @@
 
 import {render} from 'react-dom'
-import {Counter} from "./Counter/Counter";
+import App from "./App";
 
 render(
     <div>
-        <Counter/>
+        <App/>
     </div>,
 
     document.getElementById('root')
