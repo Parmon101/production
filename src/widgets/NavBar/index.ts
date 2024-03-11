@@ -1,5 +1,3 @@
-import { Navbar } from 'widgets/NavBar/ui/Navbar';
+import { Navbar } from "widgets/NavBar/ui/Navbar";
 
-export {
-  Navbar,
-};
+export { Navbar };
