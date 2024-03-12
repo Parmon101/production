@@ -36,7 +36,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "no-underscore-dangle": "off",
     "i18next/no-literal-string": ["error", { markupOnly: true }],
-    "max-len": ["error", { ignoreComments: true, code: 80 }],
+    "max-len": ["error", { ignoreComments: true, code: 100 }],
     "react/jsx-max-props-per-line": ["error", { maximum: 3 }],
   },
   globals: {
