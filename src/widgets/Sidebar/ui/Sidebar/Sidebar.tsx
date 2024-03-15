@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ThemeSwitcher } from "widgets/ThemeSwitcher/ui/ThemeSwitcher";
 import { LangSwitcher } from "widgets/LangSwitcher/LangSwitcher";
 import { classNames } from "shared/lib/classNames/classNames";
@@ -9,6 +9,7 @@ import s from "./Sidebar.module.scss";
 interface SidebarProps {
   className?: string;
 }
+
 export const Sidebar = ({ className }: SidebarProps) => {
   const { t } = useTranslation();
 
