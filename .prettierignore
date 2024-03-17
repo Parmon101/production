@@ -4,3 +4,4 @@ coverage
 *.html
 *.css
 *.scss
+./storybook-static
