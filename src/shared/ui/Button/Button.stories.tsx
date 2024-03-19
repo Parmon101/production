@@ -27,6 +27,12 @@ Clear.args = {
   theme: ButtonTheme.CLEAR,
 };
 
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+  children: "Text",
+  theme: ButtonTheme.CLEAR_INVERTED,
+};
+
 export const Outline = Template.bind({});
 Outline.args = {
   children: "Text",
@@ -40,15 +46,8 @@ OutlineSizeL.args = {
   size: ButtonSize.L,
 };
 
-export const OutlineSizeM = Template.bind({});
-OutlineSizeM.args = {
-  children: "Text",
-  theme: ButtonTheme.OUTLINE,
-  size: ButtonSize.M,
-};
-
-export const OutlineSizeXL = Template.bind({});
-OutlineSizeXL.args = {
+export const OutlineSizeXl = Template.bind({});
+OutlineSizeXl.args = {
   children: "Text",
   theme: ButtonTheme.OUTLINE,
   size: ButtonSize.XL,
@@ -76,7 +75,7 @@ BackgroundInverted.args = {
 export const Square = Template.bind({});
 Square.args = {
   children: ">",
-  theme: ButtonTheme.BACKGROUND,
+  theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
 };
 
@@ -96,8 +95,8 @@ SquareSizeM.args = {
   size: ButtonSize.M,
 };
 
-export const SquareSizeXL = Template.bind({});
-SquareSizeXL.args = {
+export const SquareSizeXl = Template.bind({});
+SquareSizeXl.args = {
   children: ">",
   theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
