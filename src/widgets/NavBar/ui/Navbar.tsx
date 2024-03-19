@@ -23,9 +23,9 @@ export const Navbar = ({ className }: NavbarProps) => {
         theme={ButtonTheme.CLEAR_INVERTED}
         className={s.links}
         onClick={onToggleModal}
-      />
-      {t("Войти")}
-      <div />
+      >
+        {t("Войти")}
+      </Button>
       <Modal isOpen={isAuthModal} onClose={onToggleModal}>
         {t(
           "Тестовый пример для модалки. Тестовый пример для модалки .Тестовый пример для модалки  ",
