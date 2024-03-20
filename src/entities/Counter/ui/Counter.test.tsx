@@ -1,8 +1,8 @@
 import { fireEvent, screen } from "@testing-library/react";
 import { Sidebar } from "widgets/Sidebar/ui/Sidebar/Sidebar";
 import { componentRender } from "shared/lib/tests/componentsRender/componentsRender";
-import { Counter } from "entities/Counter";
 import { userEvent } from "@storybook/testing-library";
+import { Counter } from "./Counter";
 
 describe("Counter", () => {
   test("test render", () => {
