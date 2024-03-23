@@ -1,6 +1,6 @@
 import { classNames } from "shared/lib/classNames/classNames";
-import { ButtonHTMLAttributes, FC } from "react";
-import s from "./Button.module.scss";
+import { ButtonHTMLAttributes, memo, ReactNode } from "react";
+import cls from "./Button.module.scss";
 
 export enum ButtonTheme {
   CLEAR = "clear",
@@ -21,31 +21,36 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   theme?: ButtonTheme;
   square?: boolean;
   size?: ButtonSize;
+  disabled?: boolean;
+  children?: ReactNode;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+export const Button = memo((props: ButtonProps) => {
   const {
     className,
     children,
     theme,
     square,
+    disabled,
     size = ButtonSize.M,
     ...otherProps
   } = props;
 
   const mods: Record<string, boolean> = {
-    [s[theme]]: true,
-    [s.square]: square,
-    [s[size]]: true,
+    [cls[theme]]: true,
+    [cls.square]: square,
+    [cls[size]]: true,
+    [cls.disabled]: disabled,
   };
 
   return (
     <button
       type="button"
-      className={classNames(s.Button, mods, [className])}
+      className={classNames(cls.Button, mods, [className])}
+      disabled={disabled}
       {...otherProps}
     >
       {children}
     </button>
   );
-};
+});
