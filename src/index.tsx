@@ -9,13 +9,13 @@ import React from "react";
 import { StoreProvider } from "app/providers/StoreProvider";
 
 render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ThemeProvider>
         <App />
       </ThemeProvider>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
 
   document.getElementById("root"),
 );
