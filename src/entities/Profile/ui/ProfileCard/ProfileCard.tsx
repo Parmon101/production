@@ -3,9 +3,11 @@ import { useTranslation } from "react-i18next";
 import { Text, TextAlign, TextTheme } from "shared/ui/Text/Text";
 import { Input } from "shared/ui/Input/Input";
 import { Avatar } from "shared/ui/Avatar/Avatar";
-import { Currency, CurrencySelect } from "entities/Currency";
+import { Currency } from "entities/Currency/model/types/currency";
+import { CurrencySelect } from "entities/Currency";
+import { Country } from "entities/Country/model/types/country";
+import { CountrySelect } from "entities/Country";
 import { Loader } from "widgets/Loader/Loader";
-import { Country, CountrySelect } from "entities/CountrySelect";
 import cls from "./ProfileCard.module.scss";
 import { Profile } from "../../model/types/profile";
 
