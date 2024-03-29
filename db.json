@@ -113,14 +113,28 @@
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     }
   ],
-  "profile": {
+  "profile": [
+    {
+      "id": "1",
     "first": "Евгений",
     "lastname": "Беляков",
     "age": 30,
     "currency": "RUB",
     "country": "Russia",
     "city": "Rostov-on-don",
-    "username": "admin",
+    "username": "parmon",
     "avatar": "https://kalix.club/uploads/posts/2022-12/1671514983_kalix-club-p-oboi-shturmovik-vkontakte-6.jpg"
-  }
+    },
+    {
+      "id": "2",
+      "first": "Олеся",
+      "lastname": "Белякова",
+      "age": 25,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Moscow",
+      "username": "admin",
+      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
+    }
+  ]
 }
