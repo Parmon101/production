@@ -102,13 +102,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fparade.com%2F1376509%2Falexandra-hurtado%2Fstar-wars-characters%2F&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAE"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     }
   ],
   "profile": {
