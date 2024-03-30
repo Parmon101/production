@@ -1,11 +1,10 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import "app/styles/index.scss";
-import { ArticlesPage } from "./ArticlesPage";
+import ArticlesPage from "./ArticlesPage";
 
 export default {
-  title: "shared/ArticlePage",
+  title: "pages/Article/ArticlesPage",
   component: ArticlesPage,
   argTypes: {
     backgroundColor: { control: "color" },
