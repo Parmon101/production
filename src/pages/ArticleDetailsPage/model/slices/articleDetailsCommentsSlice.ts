@@ -6,7 +6,7 @@ import {
 
 import { Comment } from "entities/Comment";
 import { StateSchema } from "app/providers/StoreProvider";
-// eslint-disable-next-line max-len
+// eslint-disable-next-line max-lenw
 import { fetchCommentsByArticleId } from "pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { ArticleDetailsCommentsSchema } from "pages/ArticleDetailsPage";
 
