@@ -602,28 +602,35 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fparade.com%2F1376509%2Falexandra-hurtado%2Fstar-wars-characters%2F&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAE"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
+    },
+    {
+      "id": "3",
+      "username": "Ole",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     }
   ],
   "profile": [
     {
       "id": "1",
-    "first": "Евгений",
-    "lastname": "Беляков",
-    "age": 30,
-    "currency": "RUB",
-    "country": "Russia",
-    "city": "Rostov-on-don",
-    "username": "parmon",
-    "avatar": "https://kalix.club/uploads/posts/2022-12/1671514983_kalix-club-p-oboi-shturmovik-vkontakte-6.jpg"
+      "first": "Евгений",
+      "lastname": "Беляков",
+      "age": 30,
+      "currency": "RUB",
+      "country": "Russia",
+      "city": "Rostov-on-don",
+      "username": "parmon",
+      "avatar": "https://kalix.club/uploads/posts/2022-12/1671514983_kalix-club-p-oboi-shturmovik-vkontakte-6.jpg"
     },
     {
       "id": "2",
