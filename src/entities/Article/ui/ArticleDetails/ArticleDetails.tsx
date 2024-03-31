@@ -16,7 +16,7 @@ import { Icon } from "shared/ui/Icon/Icon";
 import { ArticleCodeBlockComponent } from "entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent";
 import { ArticleImageBlockComponent } from "entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent";
 import { ArticleTextBlockComponent } from "entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent";
-import { fetchArticleById } from "entities/Article/model/services/fetchArticleById";
+import { fetchArticleById } from "entities/Article/model/services/fetchArticleById/fetchArticleById";
 import { articleDetailsReducer } from "../../model/slice/articleDetailsSlice";
 import cls from "./ArticleDetails.module.scss";
 import {
