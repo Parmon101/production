@@ -1,7 +1,6 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import { Input } from "shared/ui/Input/Input";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+import { Input } from "./Input";
 
 export default {
   title: "shared/Input",

@@ -1,1 +1,3 @@
-export { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import { ThemeSwitcher } from "./ui/ThemeSwitcher";
+
+export { ThemeSwitcher };
