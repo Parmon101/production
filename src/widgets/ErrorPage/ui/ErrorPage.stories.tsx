@@ -1,10 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import "app/styles/index.scss";
 import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
-import { ErrorPage } from "widgets/ErrorPage/ui/ErrorPage";
+import { ErrorPage } from "./ErrorPage";
 
 export default {
   title: "widget/ErrorPage",
