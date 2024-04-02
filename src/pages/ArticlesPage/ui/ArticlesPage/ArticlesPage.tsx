@@ -1,22 +1,22 @@
-import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
+import { useSelector } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { classNames } from "@/shared/lib/classNames/classNames";
 import {
   ArticleList,
   ArticleView,
   ArticleViewSelector,
-} from "entities/Article";
+} from "@/entities/Article";
 import {
   DynamicModuleLoader,
   ReducersList,
-} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import { useInitialEffect } from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import { useSelector } from "react-redux";
-import { useAppDispatch } from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { ArticlesPageFilters } from "pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters";
-import { useSearchParams } from "react-router-dom";
-import { Page } from "widgets/Page/Page";
-import { initArticlesPage } from "pages/ArticlesPage/model/services/initAritclesPage/initAritclesPage";
+} from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import { useInitialEffect } from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
+import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import { ArticlesPageFilters } from "@/pages/ArticlesPage/ui/ArticlesPageFilters/ArticlesPageFilters";
+import { Page } from "@/widgets/Page/Page";
+import { initArticlesPage } from "@/pages/ArticlesPage/model/services/initAritclesPage/initAritclesPage";
 import { fetchNextArticlesPage } from "../../model/services/fetchNextArticlesPage/fetchNextArticlesPage";
 import {
   articlesPageActions,

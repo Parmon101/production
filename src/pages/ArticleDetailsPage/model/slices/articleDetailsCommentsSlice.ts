@@ -4,9 +4,9 @@ import {
   PayloadAction,
 } from "@reduxjs/toolkit";
 
-import { Comment } from "entities/Comment";
-import { StateSchema } from "app/providers/StoreProvider";
-import { fetchCommentsByArticleId } from "pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
+import { Comment } from "@/entities/Comment";
+import { StateSchema } from "@/app/providers/StoreProvider";
+import { fetchCommentsByArticleId } from "@/pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId";
 import { ArticleDetailsCommentsSchema } from "../types/ArticleDetailsCommentsSchema";
 
 const commentsAdapter = createEntityAdapter<Comment>({
