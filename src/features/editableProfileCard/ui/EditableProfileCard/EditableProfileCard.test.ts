@@ -10,13 +10,13 @@ import { EditableProfileCard } from './EditableProfileCard';
 
 const profile: Profile = {
   id: '1',
-  username: "admin",
-  age: 30,
-  country: Country.Russia,
-  lastname: "Belyakov",
-  first: "Evg",
-  city: "RnD",
-  currency: Currency.RUB,
+  first: 'admin',
+  lastname: 'admin',
+  age: 465,
+  currency: Currency.USD,
+  country: Country.Kazakhstan,
+  city: 'Moscow',
+  username: 'admin213',
 };
 
 const options = {
