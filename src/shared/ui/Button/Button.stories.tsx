@@ -1,10 +1,9 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import "@/app/styles/index.scss";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import { Theme } from "@/app/providers/ThemeProvider";
-import { Button, ButtonSize, ButtonTheme } from "@/shared/ui/Button/Button";
+import { Button, ButtonSize, ButtonTheme } from "./Button";
 
 export default {
   title: "shared/Button",
@@ -87,18 +86,17 @@ SquareSizeL.args = {
   size: ButtonSize.L,
 };
 
-export const SquareSizeM = Template.bind({});
-SquareSizeM.args = {
-  children: ">",
-  theme: ButtonTheme.BACKGROUND_INVERTED,
-  square: true,
-  size: ButtonSize.M,
-};
-
 export const SquareSizeXl = Template.bind({});
 SquareSizeXl.args = {
   children: ">",
   theme: ButtonTheme.BACKGROUND_INVERTED,
   square: true,
   size: ButtonSize.XL,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: ">",
+  theme: ButtonTheme.OUTLINE,
+  disabled: true,
 };
