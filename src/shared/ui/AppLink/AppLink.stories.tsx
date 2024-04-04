@@ -1,10 +1,8 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-
-import "@/app/styles/index.scss";
-import { AppLink, AppLinkTheme } from "@/shared/ui/AppLink/AppLink";
+import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { ThemeDecorator } from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import { Theme } from "@/app/providers/ThemeProvider";
+import { AppLink, AppLinkTheme } from "./AppLink";
+import { Theme } from "@/shared/const/theme";
 
 export default {
   title: "shared/AppLink",
@@ -13,12 +11,11 @@ export default {
     backgroundColor: { control: "color" },
   },
   args: {
-    to: "",
+    to: "/",
   },
 } as ComponentMeta<typeof AppLink>;
 
 const Template: ComponentStory<typeof AppLink> = (args) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <AppLink {...args} />
 );
 

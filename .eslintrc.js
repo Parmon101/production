@@ -23,7 +23,8 @@ module.exports = {
     "@typescript-eslint",
     "i18next",
     "react-hooks",
-    "parm-plugin",
+    "ulbi-tv-plugin",
+    // "parm-plugin",
   ],
   rules: {
     "react/jsx-indent": [2, 2],
@@ -71,8 +72,15 @@ module.exports = {
     "no-undef": "off",
     "react/no-array-index-key": "off",
     "arrow-body-style": "off",
-    "parm-plugin/path-checker": ["error", { alias: "@" }],
-    "parm-plugin/public-api-imports": [
+    "ulbi-tv-plugin/path-checker": ["error", { alias: "@" }],
+    "ulbi-tv-plugin/layer-imports": [
+      "error",
+      {
+        alias: "@",
+        ignoreImportPatterns: ["**/StoreProvider", "**/testing"],
+      },
+    ],
+    "ulbi-tv-plugin/public-api-imports": [
       "error",
       {
         alias: "@",
