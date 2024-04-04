@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import {
   ArticleSortField,
   ArticleSortSelector,
+  ArticleType,
   ArticleTypeTabs,
   ArticleView,
   ArticleViewSelector,
@@ -16,7 +17,6 @@ import { Input } from "@/shared/ui/Input/Input";
 import { SortOrder } from "@/shared/types";
 import { useDebounce } from "@/shared/lib/hooks/useDebounce/useDebounce";
 import { TabItem, Tabs } from "@/shared/ui/Tabs/Tabs";
-import { ArticleType } from "@/entities/Article/model/types/article";
 import { fetchArticlesList } from "../../model/services/fetchArticlesList/fetchArticlesList";
 import cls from "./ArticlesPageFilters.module.scss";
 import {
@@ -86,9 +86,9 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     (value: ArticleType) => {
       dispatch(articlesPageActions.setType(value));
       dispatch(articlesPageActions.setPage(1));
-      debouncedFetchData();
+      fetchData();
     },
-    [dispatch, debouncedFetchData],
+    [dispatch, fetchData],
   );
 
   return (
