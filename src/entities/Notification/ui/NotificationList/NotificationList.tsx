@@ -23,8 +23,11 @@ export const NotificationList = memo((props: NotificationListProps) => {
         max
         className={classNames(cls.NotificationList, {}, [className])}
       >
+        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
+        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
+        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
       </VStack>
     );
@@ -36,7 +39,9 @@ export const NotificationList = memo((props: NotificationListProps) => {
       max
       className={classNames(cls.NotificationList, {}, [className])}
     >
-      {data?.map((item) => <NotificationItem key={item.id} item={item} />)}
+      {data?.map((item) => (
+        <NotificationItem key={item.id} item={item} />
+      ))}
     </VStack>
   );
 });

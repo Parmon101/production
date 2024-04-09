@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { memo, useCallback } from "react";
-import {
-  ListBox,
-} from "@/shared/ui/Popups";
+import { ListBox } from "@/shared/ui/Popups";
 import { Currency } from "../../model/types/currency";
 
 interface CurrencySelectProps {
@@ -26,7 +24,7 @@ export const CurrencySelect = memo(
       (value: string) => {
         onChange?.(value as Currency);
       },
-      [onChange],
+      [onChange]
     );
 
     return (
@@ -41,5 +39,5 @@ export const CurrencySelect = memo(
         direction="top right"
       />
     );
-  },
+  }
 );
