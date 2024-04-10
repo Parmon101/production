@@ -28,7 +28,7 @@ const article = {
     id: "1",
     username: "Evgeny Bel",
     avatar:
-      "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg",
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ",
   },
   type: ["IT", "SCIENCE", "POLITICS", "ECONOMICS"],
   blocks: [
