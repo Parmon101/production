@@ -639,6 +639,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fparade.com%2F1376509%2Falexandra-hurtado%2Fstar-wars-characters%2F&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAE"
     },
     {
@@ -648,6 +652,10 @@
       "roles": [
         "USER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": false
+      },
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     },
     {
@@ -657,6 +665,10 @@
       "roles": [
         "MANAGER"
       ],
+      "features": {
+        "isArticleRatingEnabled": false,
+        "isCounterEnabled": true
+      },
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     },
     {
@@ -666,6 +678,10 @@
       "roles": [
         "ADMIN"
       ],
+      "features": {
+        "isArticleRatingEnabled": true,
+        "isCounterEnabled": true
+      },
       "avatar": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fmashable.com%2Farticle%2Fjar-jar-popular-star-wars-gop&psig=AOvVaw2ouAjkt2ji33subVabKdAQ&ust=1711811505469000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJjnuvfgmYUDFQAAAAAdAAAAABAJ"
     }
   ],
