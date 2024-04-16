@@ -1,10 +1,10 @@
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { VStack } from "@/shared/ui/Stack";
-import { Skeleton } from "@/shared/ui/Skeleton";
-import { useNotifications } from "../../api/notificationApi";
-import cls from "./NotificationList.module.scss";
-import { NotificationItem } from "../NotificationItem/NotificationItem";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { useNotifications } from '../../api/notificationApi';
+import cls from './NotificationList.module.scss';
+import { NotificationItem } from '../NotificationItem/NotificationItem';
 
 interface NotificationListProps {
   className?: string;
@@ -23,11 +23,8 @@ export const NotificationList = memo((props: NotificationListProps) => {
         max
         className={classNames(cls.NotificationList, {}, [className])}
       >
-        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
-        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
-        {/* eslint-disable-next-line i18next/no-literal-string */}
         <Skeleton width="100%" border="8px" height="80px" />
       </VStack>
     );

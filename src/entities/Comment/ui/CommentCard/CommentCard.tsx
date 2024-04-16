@@ -1,13 +1,13 @@
-import { memo } from "react";
-import { classNames } from "@/shared/lib/classNames/classNames";
-import { Avatar } from "@/shared/ui/Avatar";
-import { Text } from "@/shared/ui/Text";
-import { Skeleton } from "@/shared/ui/Skeleton";
-import { AppLink } from "@/shared/ui/AppLink";
-import { VStack } from "@/shared/ui/Stack";
-import cls from "./CommentCard.module.scss";
-import { Comment } from "../../model/types/comment";
-import { getRouteProfile } from "@/shared/const/router";
+import { memo } from 'react';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { Skeleton } from '@/shared/ui/deprecated/Skeleton';
+import { AppLink } from '@/shared/ui/deprecated/AppLink';
+import { VStack } from '@/shared/ui/deprecated/Stack';
+import cls from './CommentCard.module.scss';
+import { Comment } from '../../model/types/comment';
+import { getRouteProfile } from '@/shared/const/router';
 
 interface CommentCardProps {
   className?: string;
@@ -24,11 +24,18 @@ export const CommentCard = memo((props: CommentCardProps) => {
         data-testid="CommentCard.Loading"
         gap="8"
         max
-        className={classNames(cls.CommentCard, {}, [className, cls.loading])}
+        className={classNames(cls.CommentCard, {}, [
+          className,
+          cls.loading,
+        ])}
       >
         <div className={cls.header}>
           <Skeleton width={30} height={30} border="50%" />
-          <Skeleton height={16} width={100} className={cls.username} />
+          <Skeleton
+            height={16}
+            width={100}
+            className={cls.username}
+          />
         </div>
         <Skeleton className={cls.text} width="100%" height={50} />
       </VStack>
@@ -46,7 +53,10 @@ export const CommentCard = memo((props: CommentCardProps) => {
       max
       className={classNames(cls.CommentCard, {}, [className])}
     >
-      <AppLink to={getRouteProfile(comment.user.id)} className={cls.header}>
+      <AppLink
+        to={getRouteProfile(comment.user.id)}
+        className={cls.header}
+      >
         {comment.user.avatar ? (
           <Avatar size={30} src={comment.user.avatar} />
         ) : null}

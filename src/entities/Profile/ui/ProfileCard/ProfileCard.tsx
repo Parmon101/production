@@ -1,14 +1,14 @@
-import { useTranslation } from "react-i18next";
-import { classNames, Mods } from "@/shared/lib/classNames/classNames";
-import { Text, TextAlign, TextTheme } from "@/shared/ui/Text";
-import { Input } from "@/shared/ui/Input";
-import { Loader } from "@/shared/ui/Loader";
-import { Avatar } from "@/shared/ui/Avatar";
-import { Currency, CurrencySelect } from "@/entities/Currency";
-import { Country, CountrySelect } from "@/entities/Country";
-import { HStack, VStack } from "@/shared/ui/Stack";
-import cls from "./ProfileCard.module.scss";
-import { Profile } from "../../model/types/profile";
+import { useTranslation } from 'react-i18next';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { Text, TextAlign, TextTheme } from '@/shared/ui/deprecated/Text';
+import { Input } from '@/shared/ui/deprecated/Input';
+import { Loader } from '@/shared/ui/deprecated/Loader';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
+import { Currency, CurrencySelect } from '@/entities/Currency';
+import { Country, CountrySelect } from '@/entities/Country';
+import { HStack, VStack } from '@/shared/ui/deprecated/Stack';
+import cls from './ProfileCard.module.scss';
+import { Profile } from '../../model/types/profile';
 
 interface ProfileCardProps {
   className?: string;
@@ -42,16 +42,18 @@ export const ProfileCard = (props: ProfileCardProps) => {
     onChangeCountry,
     onChangeCurrency,
   } = props;
-  const { t } = useTranslation("profile");
+  const { t } = useTranslation('profile');
 
   if (isLoading) {
     return (
       <HStack
         justify="center"
         max
-        className={classNames(cls.ProfileCard, { [cls.loading]: true }, [
-          className,
-        ])}
+        className={classNames(
+          cls.ProfileCard,
+          { [cls.loading]: true },
+          [className],
+        )}
       >
         <Loader />
       </HStack>
@@ -63,12 +65,15 @@ export const ProfileCard = (props: ProfileCardProps) => {
       <HStack
         justify="center"
         max
-        className={classNames(cls.ProfileCard, {}, [className, cls.error])}
+        className={classNames(cls.ProfileCard, {}, [
+          className,
+          cls.error,
+        ])}
       >
         <Text
           theme={TextTheme.ERROR}
-          title={t("Произошла ошибка при загрузке профиля")}
-          text={t("Попробуйте обновить страницу")}
+          title={t('Произошла ошибка при загрузке профиля')}
+          text={t('Попробуйте обновить страницу')}
           align={TextAlign.CENTER}
         />
       </HStack>
@@ -92,7 +97,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       )}
       <Input
         value={data?.first}
-        placeholder={t("Ваше имя")}
+        placeholder={t('Ваше имя')}
         className={cls.input}
         onChange={onChangeFirstname}
         readonly={readonly}
@@ -100,7 +105,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
       />
       <Input
         value={data?.lastname}
-        placeholder={t("Ваша фамилия")}
+        placeholder={t('Ваша фамилия')}
         className={cls.input}
         onChange={onChangeLastname}
         readonly={readonly}
@@ -108,28 +113,28 @@ export const ProfileCard = (props: ProfileCardProps) => {
       />
       <Input
         value={data?.age}
-        placeholder={t("Ваш возраст")}
+        placeholder={t('Ваш возраст')}
         className={cls.input}
         onChange={onChangeAge}
         readonly={readonly}
       />
       <Input
         value={data?.city}
-        placeholder={t("Город")}
+        placeholder={t('Город')}
         className={cls.input}
         onChange={onChangeCity}
         readonly={readonly}
       />
       <Input
         value={data?.username}
-        placeholder={t("Введите имя пользователя")}
+        placeholder={t('Введите имя пользователя')}
         className={cls.input}
         onChange={onChangeUsername}
         readonly={readonly}
       />
       <Input
         value={data?.avatar}
-        placeholder={t("Введите ссылку на аватар")}
+        placeholder={t('Введите ссылку на аватар')}
         className={cls.input}
         onChange={onChangeAvatar}
         readonly={readonly}

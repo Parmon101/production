@@ -1,7 +1,7 @@
-import { useTranslation } from "react-i18next";
-import { memo, useCallback } from "react";
-import { ListBox } from "@/shared/ui/Popups";
-import { Currency } from "../../model/types/currency";
+import { useTranslation } from 'react-i18next';
+import { memo, useCallback } from 'react';
+import { ListBox } from '@/shared/ui/deprecated/Popups';
+import { Currency } from '../../model/types/currency';
 
 interface CurrencySelectProps {
   className?: string;
@@ -24,20 +24,20 @@ export const CurrencySelect = memo(
       (value: string) => {
         onChange?.(value as Currency);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
       <ListBox
         className={className}
         value={value}
-        defaultValue={t("Укажите валюту")}
-        label={t("Укажите валюту")}
+        defaultValue={t('Укажите валюту')}
+        label={t('Укажите валюту')}
         items={options}
         onChange={onChangeHandler}
         readonly={readonly}
         direction="top right"
       />
     );
-  }
+  },
 );
