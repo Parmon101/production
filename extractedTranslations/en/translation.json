@@ -2,6 +2,7 @@
   "Env Bel": "Env Bel",
   "Evg Bel App": "",
   "Evgeny Bel": "Evgeny Bel",
+  "Ulbi TV App": "",
   "about": "",
   "decrement": "decrement",
   "increment": "increment",
@@ -88,5 +89,6 @@
   "названию": "названию",
   "по": "по",
   "просмотрам": "просмотрам",
-  "убыванию": "убыванию"
+  "убыванию": "убыванию",
+  "Parm": "Parm"
 }
