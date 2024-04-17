@@ -1,27 +1,27 @@
-import { JsxAttribute, Node, Project, SyntaxKind } from "ts-morph";
+import { JsxAttribute, Node, Project, SyntaxKind } from 'ts-morph';
 
 const removedFeatureName = process.argv[2]; // example isArticleEnabled
 const featureState = process.argv[3]; // example off\on
 
-const toggleFunctionName = "toggleFeatures";
-const toggleComponentName = "ToggleFeatures";
+const toggleFunctionName = 'toggleFeatures';
+const toggleComponentName = 'ToggleFeatures';
 
 if (!removedFeatureName) {
-  throw new Error("Укажите название фича-флага");
+  throw new Error('Укажите название фича-флага');
 }
 
 if (!featureState) {
-  throw new Error("Укажите состояние фичи (on или off)");
+  throw new Error('Укажите состояние фичи (on или off)');
 }
 
-if (featureState !== "on" && featureState !== "off") {
-  throw new Error("Некорректное значение состояния фичи (on или off)");
+if (featureState !== 'on' && featureState !== 'off') {
+  throw new Error('Некорректное значение состояния фичи (on или off)');
 }
 
 const project = new Project({});
 
-project.addSourceFilesAtPaths("src/**/ArticleDetailsPage.ts");
-project.addSourceFilesAtPaths("src/**/ArticleDetailsPage.tsx");
+project.addSourceFilesAtPaths('src/**/ArticleDetailsPage.ts');
+project.addSourceFilesAtPaths('src/**/ArticleDetailsPage.tsx');
 
 const files = project.getSourceFiles();
 
@@ -48,21 +48,21 @@ function isToggleComponent(node: Node) {
 
 const replaceToggleFunction = (node: Node) => {
   const objectOptions = node.getFirstDescendantByKind(
-    SyntaxKind.ObjectLiteralExpression
+    SyntaxKind.ObjectLiteralExpression,
   );
 
   if (!objectOptions) return;
 
-  const offFunctionProperty = objectOptions.getProperty("off");
-  const onFunctionProperty = objectOptions.getProperty("on");
+  const offFunctionProperty = objectOptions.getProperty('off');
+  const onFunctionProperty = objectOptions.getProperty('on');
 
-  const featureNameProperty = objectOptions.getProperty("name");
+  const featureNameProperty = objectOptions.getProperty('name');
 
   const onFunction = onFunctionProperty?.getFirstDescendantByKind(
-    SyntaxKind.ArrowFunction
+    SyntaxKind.ArrowFunction,
   );
   const offFunction = offFunctionProperty?.getFirstDescendantByKind(
-    SyntaxKind.ArrowFunction
+    SyntaxKind.ArrowFunction,
   );
   const featureName = featureNameProperty
     ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
@@ -71,18 +71,18 @@ const replaceToggleFunction = (node: Node) => {
 
   if (featureName !== removedFeatureName) return;
 
-  if (featureState === "on") {
-    node.replaceWithText(onFunction?.getBody().getText() ?? "");
+  if (featureState === 'on') {
+    node.replaceWithText(onFunction?.getBody().getText() ?? '');
   }
 
-  if (featureState === "off") {
-    node.replaceWithText(offFunction?.getBody().getText() ?? "");
+  if (featureState === 'off') {
+    node.replaceWithText(offFunction?.getBody().getText() ?? '');
   }
 };
 
 const getAttributeNodeByName = (
   jsxAttributes: JsxAttribute[],
-  name: string
+  name: string,
 ) => {
   return jsxAttributes.find((node) => node.getName() === name);
 };
@@ -93,7 +93,7 @@ const getReplacedComponent = (attribute?: JsxAttribute) => {
     ?.getExpression()
     ?.getText();
 
-  if (value?.startsWith("(")) {
+  if (value?.startsWith('(')) {
     return value.slice(1, -1);
   }
 
@@ -103,10 +103,10 @@ const getReplacedComponent = (attribute?: JsxAttribute) => {
 const replaceComponent = (node: Node) => {
   const attributes = node.getDescendantsOfKind(SyntaxKind.JsxAttribute);
 
-  const onAttribute = getAttributeNodeByName(attributes, "on");
-  const offAttribute = getAttributeNodeByName(attributes, "off");
+  const onAttribute = getAttributeNodeByName(attributes, 'on');
+  const offAttribute = getAttributeNodeByName(attributes, 'off');
 
-  const featureNameAttribute = getAttributeNodeByName(attributes, "feature");
+  const featureNameAttribute = getAttributeNodeByName(attributes, 'feature');
   const featureName = featureNameAttribute
     ?.getFirstDescendantByKind(SyntaxKind.StringLiteral)
     ?.getText()
@@ -117,11 +117,11 @@ const replaceComponent = (node: Node) => {
   const offValue = getReplacedComponent(offAttribute);
   const onValue = getReplacedComponent(onAttribute);
 
-  if (featureState === "on" && onValue) {
+  if (featureState === 'on' && onValue) {
     node.replaceWithText(onValue);
   }
 
-  if (featureState === "off" && offValue) {
+  if (featureState === 'off' && offValue) {
     node.replaceWithText(offValue);
   }
 };
